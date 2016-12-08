@@ -1,0 +1,116 @@
+package com.etorrus.documents;
+
+import com.etorrus.exceptions.DocumentExistException;
+import com.etorrus.staffs.Person;
+
+import java.util.Date;
+
+public abstract class Document implements Comparable<Document>, Storable{
+
+    //идентификатор документа
+    private static int count;
+    private int id;
+    //название документа
+    private String name;
+    //текст документа
+    private String text;
+    //регистрационный номер документа
+    private int regNumCount;
+    private String regNum;
+    //дата регистрации документа
+    private Date regDate;
+    //автор документа
+    private Person author;
+
+    public Document() {
+        this(null);
+    }
+
+    public Document(Person author) {
+        this.author = author;
+    }
+
+    public static int getCount() {
+        return count;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
+
+    public String getRegNum() {
+        return regNum;
+    }
+
+    public void setRegNum(String reg_num){
+
+        this.regNum = reg_num;
+    }
+
+    public int getRegNumCount() {
+        return regNumCount;
+    }
+
+    public void setRegNumCount(int regNumCount) {
+        this.regNumCount = regNumCount;
+    }
+
+    public Date getDateReg() {
+        return regDate;
+    }
+
+    public void setDateReg(Date dateReg) {
+        this.regDate = dateReg;
+    }
+
+    public Person getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Person author) {
+        this.author = author;
+    }
+
+    public int compareTo(Document compareDoc) {
+        /*return this.regNumCount - compareDoc.getRegNumCount();*/
+        return  this.regNum.compareTo(regNum);
+    }
+
+    /**
+     * Документу присваивается регистрационный номер
+     * после этого сохраняется*/
+
+
+    @Override
+    public String toString() {
+        return "========== Документ =========={" + "\n" +
+                "идентификатор= " + id + '\''+ "\n" +
+                "имя= " + name + '\''+ "\n" +
+                "текст= " + text + '\'' + "\n" +
+                "рег-номер= " + regNum + '\'' + "\n" +
+                "дата регистрации= " + regDate + '\''+ "\n" +
+                "автор= " + author + '\''+ "\n" +
+                '}';
+    }
+
+}
