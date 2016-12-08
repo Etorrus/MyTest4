@@ -1,4 +1,6 @@
-package com.etorrus.staffs;
+package com.etorrus.util;
+
+import com.etorrus.staffs.Person;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;

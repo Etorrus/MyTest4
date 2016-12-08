@@ -1,12 +1,9 @@
 package com.etorrus.factorys;
 
-import com.etorrus.Program;
 import com.etorrus.documents.Document;
 import com.etorrus.documents.Incoming;
-import com.etorrus.exceptions.DocumentExistException;
-import com.etorrus.service.Registration;
 import com.etorrus.staffs.Person;
-import com.etorrus.staffs.PersonWrapper;
+import com.etorrus.util.PersonWrapper;
 import com.etorrus.util.JaxbParser;
 
 import java.io.File;
@@ -23,6 +20,7 @@ public class IncomingFactory extends DocumentFactory {
         }
         return result;
     }
+
 
     public Incoming create(int i) {
         Incoming incoming = new Incoming();
@@ -48,11 +46,14 @@ public class IncomingFactory extends DocumentFactory {
             }
             Person adresse = personList.get(2);
             if (adresse != null){
-                incoming.setAddresse(adresse);
+                incoming.setAdresse(adresse);
             }
         }
         incoming.setOutgoingNum(1 +(int) Math.random() * 20);
         incoming.setOutgoingRegDate(new Date());
+
+
+
 
         System.out.println("Incoming" + i + " has been created");
         return incoming;
