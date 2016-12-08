@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personWrapper>
+    <person>
+        <id>0</id>
+        <firstName>Иван0</firstName>
+        <lastName>Иванов0</lastName>
+        <patronymic>Иванович0</patronymic>
+        <position>Сотрудник0</position>
+    </person>
+    <person>
+        <id>1</id>
+        <firstName>Иван1</firstName>
+        <lastName>Иванов1</lastName>
+        <patronymic>Иванович1</patronymic>
+        <position>Сотрудник1</position>
+    </person>
+    <person>
+        <id>2</id>
+        <firstName>Иван2</firstName>
+        <lastName>Иванов2</lastName>
+        <patronymic>Иванович2</patronymic>
+        <position>Сотрудник2</position>
+    </person>
+    <person>
+        <id>3</id>
+        <firstName>Иван3</firstName>
+        <lastName>Иванов3</lastName>
+        <patronymic>Иванович3</patronymic>
+        <position>Сотрудник3</position>
+    </person>
+    <person>
+        <id>4</id>
+        <firstName>Иван4</firstName>
+        <lastName>Иванов4</lastName>
+        <patronymic>Иванович4</patronymic>
+        <position>Сотрудник4</position>
+    </person>
+</personWrapper>
