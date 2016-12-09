@@ -6,10 +6,7 @@ import com.etorrus.model.document.Task;
 import com.etorrus.model.staff.Person;
 import com.etorrus.wrapper.PersonWrapperManager;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class TaskFactory extends DocumentFactory {
 
@@ -32,15 +29,18 @@ public class TaskFactory extends DocumentFactory {
 
         final List<Person> personList = PersonWrapperManager.getPersonList();
         if (personList != null && !personList.isEmpty()) {
+            Collections.shuffle(personList);
             Person author = personList.get(0);
             if (author != null) {
                 task.setAuthor(author);
             }
-            Person controller = personList.get(2);
+            Collections.shuffle(personList);
+            Person controller = personList.get(0);
             if (controller != null){
                 task.setController(controller);
             }
-            Person executer = personList.get(3);
+            Collections.shuffle(personList);
+            Person executer = personList.get(0);
             if (executer != null){
                 task.setExecutor(executer);
             }
