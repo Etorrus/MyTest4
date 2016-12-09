@@ -5,10 +5,7 @@ import com.etorrus.model.document.Incoming;
 import com.etorrus.model.staff.Person;
 import com.etorrus.wrapper.PersonWrapperManager;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
 
 public class IncomingFactory extends DocumentFactory {
 
@@ -32,15 +29,18 @@ public class IncomingFactory extends DocumentFactory {
 
         final List<Person> personList = PersonWrapperManager.getPersonList();
         if (personList != null && !personList.isEmpty()) {
+            Collections.shuffle(personList);
             Person author = personList.get(0);
             if (author != null) {
                 incoming.setAuthor(author);
             }
+            Collections.shuffle(personList);
             Person sender = personList.get(0);
             if (sender != null) {
                 incoming.setSender(sender);
             }
-            Person adresse = personList.get(2);
+            Collections.shuffle(personList);
+            Person adresse = personList.get(0);
             if (adresse != null){
                 incoming.setAdresse(adresse);
             }
