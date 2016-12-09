@@ -9,12 +9,6 @@ public class Outgoing extends Document{
     //способ доставки
     private String deliveryMethod;
 
-    public Outgoing() {
-        super();
-        this.setName("Outgoing: " + this.getId());
-    }
-
-
     public Person getAdresse() {
         return adresse;
     }
@@ -42,8 +36,4 @@ public class Outgoing extends Document{
     public void save() throws Exception {
 
     }
-
-    /*public String getTable() {
-        return null;
-    }*/
 }

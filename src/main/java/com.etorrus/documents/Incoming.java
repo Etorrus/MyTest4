@@ -10,15 +10,11 @@ public class Incoming extends Document {
     //отправитель
     private Person sender;
     //адресат
-    private Person addresse;
+    private Person adresse;
     //исходящий номер
     private int outgoingNum;
     //исходящая дата регистрации
     private Date outgoingRegDate;
-
-    public Incoming() {
-        super();
-    }
 
 
     public Person getSender() {
@@ -29,12 +25,12 @@ public class Incoming extends Document {
         this.sender = sender;
     }
 
-    public Person getAddresse() {
-        return addresse;
+    public Person getAdresse() {
+        return adresse;
     }
 
-    public void setAddresse(Person addresse) {
-        this.addresse = addresse;
+    public void setAdresse(Person adresse) {
+        this.adresse = adresse;
     }
 
     public int getOutgoingNum() {
@@ -59,13 +55,9 @@ public class Incoming extends Document {
         return super.toString() + "\n" +
                 "Входящий документ{" + "\n" +
                 "отправитель=" + sender + "\n" +
-                "адресат=" + addresse + '\'' + "\n" +
+                "адресат=" + adresse + '\'' + "\n" +
                 "исходящий номер=" + outgoingNum + '\'' + "\n" +
                 "исходящая дата регистрации=" + outgoingRegDate +
                 '}';
     }
-
-    /*public String getTable() {
-        return null;
-    }*/
 }

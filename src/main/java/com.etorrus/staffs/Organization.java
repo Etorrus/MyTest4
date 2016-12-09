@@ -20,16 +20,6 @@ public class Organization extends Staff {
     //Контактные телефоны
     private String contactPhones;
 
-    public Organization() {
-    }
-
-    public Organization(String fullName, String shortName, Person head, String contactPhones) {
-        this.fullName = fullName;
-        this.shortName = shortName;
-        this.head = head;
-        this.contactPhones = contactPhones;
-    }
-
     public String getFullName() {
         return fullName;
     }
