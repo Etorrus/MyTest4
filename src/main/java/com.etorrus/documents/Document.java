@@ -8,7 +8,6 @@ import java.util.Date;
 public abstract class Document implements Comparable<Document>, Storable{
 
     //идентификатор документа
-    private static int count;
     private int id;
     //название документа
     private String name;
@@ -21,18 +20,6 @@ public abstract class Document implements Comparable<Document>, Storable{
     private Date regDate;
     //автор документа
     private Person author;
-
-    public Document() {
-        this(null);
-    }
-
-    public Document(Person author) {
-        this.author = author;
-    }
-
-    public static int getCount() {
-        return count;
-    }
 
     public int getId() {
         return id;
@@ -92,15 +79,8 @@ public abstract class Document implements Comparable<Document>, Storable{
     }
 
     public int compareTo(Document compareDoc) {
-        /*return this.regNumCount - compareDoc.getRegNumCount();*/
         return  this.regNum.compareTo(regNum);
     }
-
-    /**
-     * Документу присваивается регистрационный номер
-     * после этого сохраняется*/
-
-
     @Override
     public String toString() {
         return "========== Документ =========={" + "\n" +

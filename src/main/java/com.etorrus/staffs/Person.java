@@ -20,13 +20,6 @@ public class Person extends Staff{
 
     }
 
-    public Person(String lastName, String firstName, String patronymic, String position) {
-        this.lastName = lastName;
-        this.firstName = firstName;
-        this.patronymic = patronymic;
-        this.position = position;
-    }
-
     public String getLastName() {
         return lastName;
     }

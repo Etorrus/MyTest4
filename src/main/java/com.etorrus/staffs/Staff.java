@@ -1,9 +1,8 @@
 package com.etorrus.staffs;
 
 public abstract class Staff {
-    private static int staffCount;
     //Идентификатор
-    private int id = staffCount++;
+    private int id;
 
     public int getId() {
         return id;

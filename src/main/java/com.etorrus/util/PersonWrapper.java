@@ -14,9 +14,6 @@ public class PersonWrapper {
 
     private List<Person> personList;
 
-    public PersonWrapper() {
-    }
-
     public List<Person> getPersonList() {
         return personList;
     }

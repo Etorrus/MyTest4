@@ -14,16 +14,6 @@ public class Department extends Staff {
     //Контактные телефоны
     private String contactPhones;
 
-    public Department() {
-    }
-
-    public Department(String fullName, String shortName, Person head, String contactPhones) {
-        this.fullName = fullName;
-        this.shortName = shortName;
-        this.head = head;
-        this.contactPhones = contactPhones;
-    }
-
     public String getFullName() {
         return fullName;
     }

@@ -16,15 +16,6 @@ public class Task extends Document {
     //контролер поручения
     private Person controller;
 
-    public Task() {
-        super();
-        this.setName("Task: " + this.getId());
-        this.signOfControl = false;
-        this.periodOfExecution = 5;
-        this.dateOfIssue = new Date();
-
-    }
-
     public Date getDateOfIssue() {
         return dateOfIssue;
     }

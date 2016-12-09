@@ -16,10 +16,6 @@ public class Incoming extends Document {
     //исходящая дата регистрации
     private Date outgoingRegDate;
 
-    public Incoming() {
-        super();
-    }
-
 
     public Person getSender() {
         return sender;
@@ -64,8 +60,4 @@ public class Incoming extends Document {
                 "исходящая дата регистрации=" + outgoingRegDate +
                 '}';
     }
-
-    /*public String getTable() {
-        return null;
-    }*/
 }
