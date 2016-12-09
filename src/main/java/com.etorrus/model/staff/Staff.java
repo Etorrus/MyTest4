@@ -1,4 +1,4 @@
-package com.etorrus.staffs;
+package com.etorrus.model.staff;
 
 public abstract class Staff {
     //Идентификатор

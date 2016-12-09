@@ -1,9 +1,7 @@
 package com.etorrus.util;
 
-import com.etorrus.staffs.Person;
+import com.etorrus.model.staff.Person;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;

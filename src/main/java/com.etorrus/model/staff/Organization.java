@@ -1,10 +1,16 @@
-package com.etorrus.staffs;
+package com.etorrus.model.staff;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+/*Организация (Organization)
+полное наименование;
+краткое наименование;
+руководитель;
+контактные телефоны.
+*/
 @XmlRootElement
-public class Department extends Staff {
+public class Organization extends Staff {
     //Полное наименование
     private String fullName;
     //Краткое наименование
@@ -52,11 +58,12 @@ public class Department extends Staff {
 
     @Override
     public String toString() {
-        return "Department{" +
+        return "Organization{" +
                 ", fullName=" + fullName + '\'' +
                 ", shortName=" + shortName + '\'' +
                 ", head=" + head + '\'' +
                 ", contactPhones=" + contactPhones +
                 '}';
     }
+
 }

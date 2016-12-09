@@ -1,7 +1,7 @@
-package com.etorrus.documents;
+package com.etorrus.model.document;
 
 
-import com.etorrus.staffs.Person;
+import com.etorrus.model.staff.Person;
 
 import java.util.Date;
 

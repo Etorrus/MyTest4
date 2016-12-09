@@ -1,9 +1,7 @@
 package com.etorrus.util;
 
 
-import com.etorrus.documents.Document;
-import com.etorrus.staffs.Person;
-import com.etorrus.staffs.Staff;
+import com.etorrus.model.document.Document;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;

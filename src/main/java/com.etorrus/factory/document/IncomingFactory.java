@@ -1,11 +1,9 @@
-package com.etorrus.factory;
+package com.etorrus.factory.document;
 
-import com.etorrus.documents.Incoming;
-import com.etorrus.staffs.Person;
-import com.etorrus.util.PersonWrapper;
-import com.etorrus.dao.JaxbParser;
+import com.etorrus.model.document.Incoming;
+import com.etorrus.model.staff.Person;
+import com.etorrus.service.PersonService;
 
-import java.io.File;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -30,10 +28,10 @@ public class IncomingFactory extends DocumentFactory {
         incoming.setRegNum("i-00" + incoming.getId()+ i);
         incoming.setDateReg(new Date());
 
-        final JaxbParser parser = new JaxbParser();
+        /*final JaxbParser parser = new JaxbParser();
         final File file = new File("E:/xmlDocument/personList.xml");
-        final PersonWrapper personWraper = (PersonWrapper) parser.XMLToStaff(file, PersonWrapper.class);
-        final List<Person> personList = personWraper.getPersonList();
+        final PersonWrapper personWraper = (PersonWrapper) parser.XMLToStaff(file, PersonWrapper.class);*/
+        final List<Person> personList = PersonService.getPersonList();
         if (personList != null && !personList.isEmpty()) {
             Person author = personList.get(0);
             if (author != null) {

@@ -1,4 +1,4 @@
-package com.etorrus.factory;
+package com.etorrus.factory.document;
 
 public class DocumentFactory {
 
