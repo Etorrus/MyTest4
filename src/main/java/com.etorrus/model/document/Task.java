@@ -2,8 +2,9 @@ package com.etorrus.model.document;
 
 import com.etorrus.model.staff.Person;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
-
+@XmlRootElement
 public class Task extends Document {
     //дата выдачи поручения
     private Date dateOfIssue;

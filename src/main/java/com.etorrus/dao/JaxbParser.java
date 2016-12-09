@@ -17,6 +17,7 @@ public class JaxbParser {
     public void staffToXML(File file, Object object)
     {
         try {
+
             JAXBContext context = JAXBContext.newInstance(object.getClass());
             Marshaller m = context.createMarshaller();
             //следующая строчка делает так чтоб Xml был не в одну строку

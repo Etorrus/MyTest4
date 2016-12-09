@@ -2,9 +2,11 @@ package com.etorrus.model.document;
 
 import com.etorrus.model.staff.Person;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.Date;
 import java.util.UUID;
-
+//@XmlRootElement
 public abstract class Document implements Comparable<Document>, Storable {
 
     //идентификатор документа
@@ -32,7 +34,7 @@ public abstract class Document implements Comparable<Document>, Storable {
     public String getName() {
         return name;
     }
-
+    //@XmlElement
     public void setName(String name) {
         this.name = name;
     }
@@ -61,7 +63,7 @@ public abstract class Document implements Comparable<Document>, Storable {
     public void setRegNumCount(int regNumCount) {
         this.regNumCount = regNumCount;
     }
-
+    //@XmlElement
     public Date getDateReg() {
         return regDate;
     }
@@ -73,7 +75,7 @@ public abstract class Document implements Comparable<Document>, Storable {
     public Person getAuthor() {
         return author;
     }
-
+    //@XmlElement
     public void setAuthor(Person author) {
         this.author = author;
     }
