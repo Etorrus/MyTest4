@@ -1,5 +1,8 @@
 package com.etorrus.factory.document;
 
+import com.etorrus.model.document.Document;
+import java.util.List;
+
 public class DocumentFactory {
 
     public enum DocType {
@@ -8,21 +11,22 @@ public class DocumentFactory {
         OUTGOING
     }
 
-    public DocumentFactory getDoc(DocType docType){
-
-        DocumentFactory documentFactory = null;
+    public List<Document> getDoc(DocType docType, int count) {
         switch (docType) {
             case TASK: {
-                documentFactory = new TaskFactory();
-                return documentFactory;
+                TaskFactory taskFactory = new TaskFactory();
+                List<Document> taskList = taskFactory.getList(count);
+                return taskList;
             }
             case INCOMING: {
-                documentFactory = new IncomingFactory();
-                return documentFactory;
+                IncomingFactory incomingFactory = new IncomingFactory();
+                List<Document> incomingList = incomingFactory.getList(count);
+                return incomingList;
             }
             case OUTGOING: {
-                documentFactory = new OutgoingFactory();
-                return documentFactory;
+                OutgoingFactory outgoingFactory = new OutgoingFactory();
+                List<Document> outgoingList = outgoingFactory.getList(count);
+                return outgoingList;
             }
             default: {
                 return null;
