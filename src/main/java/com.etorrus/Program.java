@@ -1,6 +1,8 @@
 package com.etorrus;
 
 
+import com.etorrus.factory.document.DocumentFactory;
+import com.etorrus.model.document.Document;
 import com.etorrus.model.document.Incoming;
 import com.etorrus.model.document.Outgoing;
 import com.etorrus.model.document.Task;
@@ -15,7 +17,12 @@ import com.etorrus.util.PersonWrapper;
 import com.etorrus.dao.JaxbParser;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
+
+import static com.etorrus.factory.document.DocumentFactory.DocType.INCOMING;
+import static com.etorrus.factory.document.DocumentFactory.DocType.OUTGOING;
+import static com.etorrus.factory.document.DocumentFactory.DocType.TASK;
 
 public class Program {
 
@@ -38,17 +45,18 @@ public class Program {
         //DocumentWrapper documentWrapper = new DocumentWrapper();
         //List<Document> documentList = new DocumentWrapper().getDocuments();
 
-        IncomingFactory incomingFactory = new IncomingFactory();
-        List<Incoming> incomingList = incomingFactory.getList(5);
-        OutgoingFactory outgoingFactory = new OutgoingFactory();
-        List<Outgoing> outgoingList = outgoingFactory.getList(5);
-        TaskFactory taskFactory = new TaskFactory();
-        List<Task> taskList = taskFactory.getList(5);
+        List<Document> documentList = new ArrayList<Document>();
+
+        DocumentFactory documentFactory = new DocumentFactory();
+        documentFactory.getDoc(TASK, 5);
+        documentFactory.getDoc(INCOMING, 5);
+        documentFactory.getDoc(OUTGOING, 5);
+        documentList.add(documentFactory.getDoc(TASK, 2).get(0));
 
 
 
-        File fileDocuments = new File("E:/xmlDocument/documentList.xml");
-        DocumentWrapper documentWrapper = new DocumentWrapper();
+        /*File fileDocuments = new File("E:/xmlDocument/documentList.xml");
+        DocumentWrapper documentWrapper = new DocumentWrapper();*/
 
 
         Report rep = new Report();

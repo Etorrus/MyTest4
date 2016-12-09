@@ -1,5 +1,6 @@
 package com.etorrus.factory.document;
 
+import com.etorrus.model.document.Document;
 import com.etorrus.model.document.Outgoing;
 import com.etorrus.model.staff.Person;
 import com.etorrus.service.PersonService;
@@ -10,8 +11,8 @@ import java.util.List;
 
 public class OutgoingFactory extends DocumentFactory {
 
-    public List<Outgoing> getList(int count) {
-        List<Outgoing> result = new ArrayList<Outgoing>();
+    public List<Document> getList(int count) {
+        List<Document> result = new ArrayList<Document>();
         for (int i = 0; i < count; i++) {
             result.add(create(i));
         }
@@ -26,10 +27,6 @@ public class OutgoingFactory extends DocumentFactory {
         outgoing.setRegNum("o-00" + outgoing.getId() + i);
         outgoing.setDateReg(new Date());
 
-
-        /*final JaxbParser parser = new JaxbParser();
-        final File file = new File("E:/xmlDocument/personList.xml");
-        final PersonWrapper personWraper = (PersonWrapper) parser.XMLToStaff(file, PersonWrapper.class);*/
         final List<Person> personList = PersonService.getPersonList();
         if (personList != null && !personList.isEmpty()) {
             Person author = personList.get(0);
