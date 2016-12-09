@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 
 // определяем корневой элемент
-@XmlRootElement
+//@XmlRootElement
 public class Person extends Staff {
     //Фамилия
     private String lastName;
@@ -24,7 +24,7 @@ public class Person extends Staff {
         return lastName;
     }
 
-    @XmlElement
+    //@XmlElement
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
@@ -33,7 +33,7 @@ public class Person extends Staff {
         return firstName;
     }
 
-    @XmlElement
+    //@XmlElement
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -42,7 +42,7 @@ public class Person extends Staff {
         return patronymic;
     }
 
-    @XmlElement
+    //@XmlElement
     public void setPatronymic(String patronymic) {
         this.patronymic = patronymic;
     }
@@ -51,7 +51,7 @@ public class Person extends Staff {
         return position;
     }
 
-    @XmlElement
+    //@XmlElement
     public void setPosition(String position) {
         this.position = position;
     }

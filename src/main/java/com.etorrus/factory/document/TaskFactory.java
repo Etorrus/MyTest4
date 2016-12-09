@@ -49,6 +49,7 @@ public class TaskFactory extends DocumentFactory {
         task.setPeriodOfExecution(5);
         task.setSignOfControl(false);
         System.out.println("Task" + i + " has been created");
+
         return task;
     }
 

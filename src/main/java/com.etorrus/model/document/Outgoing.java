@@ -2,6 +2,9 @@ package com.etorrus.model.document;
 
 import com.etorrus.model.staff.Person;
 
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
 public class Outgoing extends Document {
 
     //адресат
