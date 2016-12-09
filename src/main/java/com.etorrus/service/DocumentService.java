@@ -1,6 +1,6 @@
 package com.etorrus.service;
 
-import com.etorrus.documents.Document;
+import com.etorrus.model.document.Document;
 import com.etorrus.exceptions.DocumentExistException;
 
 

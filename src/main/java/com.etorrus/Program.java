@@ -1,13 +1,16 @@
 package com.etorrus;
 
 
-import com.etorrus.documents.Incoming;
-import com.etorrus.documents.Outgoing;
-import com.etorrus.documents.Task;
-import com.etorrus.factory.*;
+import com.etorrus.model.document.Incoming;
+import com.etorrus.model.document.Outgoing;
+import com.etorrus.model.document.Task;
+import com.etorrus.factory.document.IncomingFactory;
+import com.etorrus.factory.document.OutgoingFactory;
+import com.etorrus.factory.document.TaskFactory;
+import com.etorrus.factory.staff.PersonFactory;
 import com.etorrus.util.DocumentWrapper;
 import com.etorrus.view.Report;
-import com.etorrus.staffs.Person;
+import com.etorrus.model.staff.Person;
 import com.etorrus.util.PersonWrapper;
 import com.etorrus.dao.JaxbParser;
 
@@ -35,11 +38,8 @@ public class Program {
         //DocumentWrapper documentWrapper = new DocumentWrapper();
         //List<Document> documentList = new DocumentWrapper().getDocuments();
 
-        List<Person> personsList = ((PersonWrapper) parser.XMLToStaff(filePersons, PersonWrapper.class)).getPersonList();
         IncomingFactory incomingFactory = new IncomingFactory();
         List<Incoming> incomingList = incomingFactory.getList(5);
-
-
         OutgoingFactory outgoingFactory = new OutgoingFactory();
         List<Outgoing> outgoingList = outgoingFactory.getList(5);
         TaskFactory taskFactory = new TaskFactory();

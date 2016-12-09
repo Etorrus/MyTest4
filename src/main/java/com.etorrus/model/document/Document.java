@@ -1,11 +1,10 @@
-package com.etorrus.documents;
+package com.etorrus.model.document;
 
-import com.etorrus.exceptions.DocumentExistException;
-import com.etorrus.staffs.Person;
+import com.etorrus.model.staff.Person;
 
 import java.util.Date;
 
-public abstract class Document implements Comparable<Document>, Storable{
+public abstract class Document implements Comparable<Document>, Storable {
 
     //идентификатор документа
     private int id;

@@ -1,4 +1,4 @@
-package com.etorrus.documents;
+package com.etorrus.model.document;
 
 public interface Storable {
 

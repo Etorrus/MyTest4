@@ -1,8 +1,8 @@
-package com.etorrus.documents;
+package com.etorrus.model.document;
 
-import com.etorrus.staffs.Person;
+import com.etorrus.model.staff.Person;
 
-public class Outgoing extends Document{
+public class Outgoing extends Document {
 
     //адресат
     private Person adresse;

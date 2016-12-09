@@ -1,4 +1,4 @@
-package com.etorrus.staffs;
+package com.etorrus.model.staff;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 // определяем корневой элемент
 @XmlRootElement
-public class Person extends Staff{
+public class Person extends Staff {
     //Фамилия
     private String lastName;
     //Имя

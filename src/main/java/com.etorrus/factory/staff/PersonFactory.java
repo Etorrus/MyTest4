@@ -1,12 +1,12 @@
-package com.etorrus.factory;
+package com.etorrus.factory.staff;
 
 
-import com.etorrus.staffs.Person;
+import com.etorrus.model.staff.Person;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class PersonFactory extends StaffFactory{
+public class PersonFactory extends StaffFactory {
 
     public List<Person> getList(int count){
         List<Person> result = new ArrayList<Person>();

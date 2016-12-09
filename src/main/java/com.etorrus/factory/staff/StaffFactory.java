@@ -1,6 +1,6 @@
-package com.etorrus.factory;
+package com.etorrus.factory.staff;
 
-import com.etorrus.staffs.Staff;
+import com.etorrus.model.staff.Staff;
 
 public abstract class StaffFactory {
     public Staff create() {
