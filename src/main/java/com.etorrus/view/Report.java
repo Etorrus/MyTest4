@@ -1,7 +1,7 @@
 package com.etorrus.view;
 
 import com.etorrus.model.staff.Person;
-import com.etorrus.service.PersonService;
+import com.etorrus.wrapper.PersonWrapperManager;
 
 import java.util.List;
 
@@ -14,11 +14,7 @@ public class Report {
 
         System.out.println("==========REPORT==========");
 
-
-        /*final JaxbParser parser = new JaxbParser();
-        final File file = new File("E:/xmlDocument/personList.xml");
-        final PersonWrapper personWraper = (PersonWrapper) parser.XMLToStaff(file, PersonWrapper.class);*/
-        final List<Person> personList = PersonService.getPersonList();
+        List<Person> personList = PersonWrapperManager.getPersonList();
 
         for (Person author : personList){
             System.out.println(author.getLastName() + " " + author.getFirstName() + " " + author.getPatronymic());

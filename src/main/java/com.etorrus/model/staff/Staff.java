@@ -1,15 +1,17 @@
 package com.etorrus.model.staff;
 
+import java.util.UUID;
+
 public abstract class Staff {
     //Идентификатор
-    private int id;
+    private UUID id;
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 }

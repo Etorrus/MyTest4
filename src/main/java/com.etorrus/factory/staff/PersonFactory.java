@@ -5,6 +5,7 @@ import com.etorrus.model.staff.Person;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 public class PersonFactory extends StaffFactory {
 
@@ -17,8 +18,8 @@ public class PersonFactory extends StaffFactory {
         return result;
     }
     public Person create(int i) {
-        super.create();
         Person person = new Person();
+        person.setId(UUID.randomUUID());
         person.setLastName("Иванов" + i);
         person.setFirstName("Иван" + i);
         person.setPatronymic("Иванович" + i);

@@ -3,11 +3,12 @@ package com.etorrus.factory.document;
 import com.etorrus.model.document.Document;
 import com.etorrus.model.document.Outgoing;
 import com.etorrus.model.staff.Person;
-import com.etorrus.service.PersonService;
+import com.etorrus.wrapper.PersonWrapperManager;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 public class OutgoingFactory extends DocumentFactory {
 
@@ -21,13 +22,13 @@ public class OutgoingFactory extends DocumentFactory {
     public Outgoing create(int i) {
         Outgoing outgoing = new Outgoing();
 
-        outgoing.setId(1 + (int)Math.random() *100);
-        outgoing.setName("Outgoing_" + outgoing.getId());
+        outgoing.setId(UUID.randomUUID());
+        outgoing.setName("Outgoing_");
         outgoing.setText("Text text");
-        outgoing.setRegNum("o-00" + outgoing.getId() + i);
+        outgoing.setRegNum("o-00" + outgoing.getId());
         outgoing.setDateReg(new Date());
 
-        final List<Person> personList = PersonService.getPersonList();
+        final List<Person> personList = PersonWrapperManager.getPersonList();
         if (personList != null && !personList.isEmpty()) {
             Person author = personList.get(0);
             if (author != null) {

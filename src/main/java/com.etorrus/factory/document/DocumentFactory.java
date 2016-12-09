@@ -11,7 +11,7 @@ public class DocumentFactory {
         OUTGOING
     }
 
-    public List<Document> getDoc(DocType docType, int count) {
+    public List<Document> getDocumentList(DocType docType, int count) {
         switch (docType) {
             case TASK: {
                 TaskFactory taskFactory = new TaskFactory();

@@ -1,7 +1,9 @@
 package com.etorrus.model.document;
 
+import java.util.UUID;
+
 public interface Storable {
 
-    public int getId();
+    public UUID getId();
     //public String getTable();
 }
