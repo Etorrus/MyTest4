@@ -4,11 +4,12 @@ package com.etorrus.factory.document;
 import com.etorrus.model.document.Document;
 import com.etorrus.model.document.Task;
 import com.etorrus.model.staff.Person;
-import com.etorrus.service.PersonService;
+import com.etorrus.wrapper.PersonWrapperManager;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.UUID;
 
 public class TaskFactory extends DocumentFactory {
 
@@ -23,13 +24,13 @@ public class TaskFactory extends DocumentFactory {
     public Task create(int i) {
         Task task = new Task();
 
-        task.setId(1 + (int)Math.random() *100);
-        task.setName("Task_" + task.getId());
+        task.setId(UUID.randomUUID());
+        task.setName("Task_");
         task.setText("Text text");
-        task.setRegNum("t-00" + task.getId() + i);
+        task.setRegNum("t-00" + task.getId());
         task.setDateReg(new Date());
 
-        final List<Person> personList = PersonService.getPersonList();
+        final List<Person> personList = PersonWrapperManager.getPersonList();
         if (personList != null && !personList.isEmpty()) {
             Person author = personList.get(0);
             if (author != null) {

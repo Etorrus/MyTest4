@@ -3,17 +3,11 @@ package com.etorrus;
 
 import com.etorrus.factory.document.DocumentFactory;
 import com.etorrus.model.document.Document;
-import com.etorrus.model.document.Incoming;
-import com.etorrus.model.document.Outgoing;
-import com.etorrus.model.document.Task;
-import com.etorrus.factory.document.IncomingFactory;
-import com.etorrus.factory.document.OutgoingFactory;
-import com.etorrus.factory.document.TaskFactory;
 import com.etorrus.factory.staff.PersonFactory;
-import com.etorrus.util.DocumentWrapper;
 import com.etorrus.view.Report;
 import com.etorrus.model.staff.Person;
-import com.etorrus.util.PersonWrapper;
+import com.etorrus.wrapper.DocumentWrapper;
+import com.etorrus.wrapper.PersonWrapper;
 import com.etorrus.dao.JaxbParser;
 
 import java.io.File;
@@ -29,35 +23,26 @@ public class Program {
 
     public static void main(String[] args) throws Exception {
 
-        PersonFactory personFactory = new PersonFactory();
-
-        List<Person> personList = personFactory.getList(5);
-        System.out.println(personList.get(3).getId());
-
         JaxbParser parser = new JaxbParser();
-        File filePersons = new File("E:/xmlDocument/personList.xml");
 
+        //Создаем людей и кидаем их в personList.xml
+        PersonFactory personFactory = new PersonFactory();
+        List<Person> personList = personFactory.getList(5);
         PersonWrapper personWrapper = new PersonWrapper();
         personWrapper.setPersonList(personList);
+        File filePersons = new File("E:/xmlDocument/personList.xml");
         parser.staffToXML(filePersons, personWrapper);
 
-
-        //DocumentWrapper documentWrapper = new DocumentWrapper();
-        //List<Document> documentList = new DocumentWrapper().getDocuments();
-
-        List<Document> documentList = new ArrayList<Document>();
-
+        //Создаем документы и кидаем их в documentList.xml
         DocumentFactory documentFactory = new DocumentFactory();
-        documentFactory.getDoc(TASK, 5);
-        documentFactory.getDoc(INCOMING, 5);
-        documentFactory.getDoc(OUTGOING, 5);
-        documentList.add(documentFactory.getDoc(TASK, 2).get(0));
-
-
-
-        /*File fileDocuments = new File("E:/xmlDocument/documentList.xml");
-        DocumentWrapper documentWrapper = new DocumentWrapper();*/
-
+        List<Document> documentList = new ArrayList<Document>();
+        documentList.addAll(documentFactory.getDocumentList(TASK, 5));
+        documentList.addAll(documentFactory.getDocumentList(INCOMING, 5));
+        documentList.addAll(documentFactory.getDocumentList(OUTGOING, 5));
+        DocumentWrapper documentWrapper = new DocumentWrapper();
+        documentWrapper.setDocumentList(documentList);
+        File fileDocuments = new File("E:/xmlDocument/documentList.xml");
+        parser.staffToXML(fileDocuments, documentWrapper);
 
         Report rep = new Report();
         rep.getReport();

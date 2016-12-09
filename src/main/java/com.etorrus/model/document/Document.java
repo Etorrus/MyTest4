@@ -3,11 +3,12 @@ package com.etorrus.model.document;
 import com.etorrus.model.staff.Person;
 
 import java.util.Date;
+import java.util.UUID;
 
 public abstract class Document implements Comparable<Document>, Storable {
 
     //идентификатор документа
-    private int id;
+    private UUID id;
     //название документа
     private String name;
     //текст документа
@@ -20,11 +21,11 @@ public abstract class Document implements Comparable<Document>, Storable {
     //автор документа
     private Person author;
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

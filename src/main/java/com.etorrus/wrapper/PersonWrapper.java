@@ -1,4 +1,4 @@
-package com.etorrus.util;
+package com.etorrus.wrapper;
 
 import com.etorrus.model.staff.Person;
 
