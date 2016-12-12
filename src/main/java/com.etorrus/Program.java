@@ -41,15 +41,15 @@ public class Program {
         documentList.addAll(documentFactory.getDocumentList(OUTGOING, 5));
         DocumentWrapper documentWrapper = new DocumentWrapper();
         documentWrapper.setDocumentList(documentList);
-        /*System.out.println(documentWrapper.getDocumentList().get(0).toString());
-        System.out.println(documentWrapper.getDocumentList().get(6).toString());
-        System.out.println(documentWrapper.getDocumentList().get(13).toString());
-*/
+        /*System.out.println(documentWrapper.getDocumentList().get(8).toString());*/
         File fileDocuments = new File("E:/xmlDocument/documentList.xml");
         parser.staffToXML(fileDocuments, documentWrapper);
 
+        //Создаем отчет
         Report rep = new Report();
         rep.getReport();
+
+
 
     }
 }
