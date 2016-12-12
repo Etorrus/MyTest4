@@ -6,6 +6,9 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
+/**
+ * тут хранятся все сгенерированые Person
+ */
 /*@XmlAccessorType(XmlAccessType.FIELD)*/
 @XmlRootElement
 public class PersonWrapper {

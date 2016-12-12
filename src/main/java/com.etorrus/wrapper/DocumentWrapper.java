@@ -11,6 +11,9 @@ import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * тут хранятся все сгенерированые Document
+ */
 //@XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 @XmlSeeAlso({
