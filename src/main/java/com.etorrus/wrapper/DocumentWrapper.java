@@ -14,15 +14,13 @@ import java.util.List;
 /**
  * тут хранятся все сгенерированые Document
  */
-//@XmlAccessorType(XmlAccessType.FIELD)
+
 @XmlRootElement
 @XmlSeeAlso({
         Outgoing.class,
         Incoming.class,
         Task.class})
 public class DocumentWrapper {
-
-    //@XmlElements({ @XmlElement(name="OUTGOING", type=Outgoing.class)});
 
     public DocumentWrapper(){
 
