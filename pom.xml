@@ -7,50 +7,50 @@
     <groupId>com.etorrus</groupId>
     <artifactId>MyTest4</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>war</packaging>
     <dependencies>
-        <dependency>
-            <groupId>com.etorrus</groupId>
-            <artifactId>MyTest4</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>2.8.0</version>
         </dependency>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>6.0</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-servlet -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-servlet</artifactId>
+            <version>1.19.3</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-json -->
+        <dependency>
+            <groupId>com.sun.jersey</groupId>
+            <artifactId>jersey-json</artifactId>
+            <version>1.19.3</version>
+        </dependency>
     </dependencies>
-
-    <properties>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
-    </properties>
-
-    <url>http://code.google.com/p/google-gson/</url>
-    <description>Google Gson grab bag of utilities, type adapters, etc.</description>
-
-    <scm>
-        <connection>scm:svn:http://google-gson.googlecode.com/svn/trunk/extras</connection>
-        <developerConnection>scm:svn:https://google-gson.googlecode.com/svn/trunk/extras</developerConnection>
-        <url>http://google-gson.codegoogle.com/svn/trunk/extras</url>
-    </scm>
-
-    <issueManagement>
-        <system>Google Code Issue Tracking</system>
-        <url>http://code.google.com/p/google-gson/issues/list</url>
-    </issueManagement>
-
-    <organization>
-        <name>Google, Inc.</name>
-        <url>http://www.google.com</url>
-    </organization>
 
     <build>
         <plugins>
             <plugin>
-                <artifactId/>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <webXml>web\WEB-INF\web.xml</webXml>
+                </configuration>
             </plugin>
         </plugins>
     </build>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <jersey.version>1.19.3</jersey.version>
+    </properties>
 </project>

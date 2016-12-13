@@ -41,6 +41,7 @@ public class Report {
                     System.out.println("        " + document.getName() + "От " + document.getDateReg());
                 }
             }
+
             json = gson.toJson(reportAuthor);
             try {
                 FileWriter writer = new FileWriter("E:/xmlDocument/" + author.getLastName() + ".json");
