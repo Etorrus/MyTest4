@@ -6,7 +6,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 // определяем корневой элемент
 //@XmlRootElement
-public class Person extends Staff {
+public class Person extends Staff implements Comparable<Person>{
     //Фамилия
     private String lastName;
     //Имя

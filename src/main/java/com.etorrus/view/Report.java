@@ -11,6 +11,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**Отчет должен содержать перечень авторов документов
@@ -27,7 +28,9 @@ public class Report {
 
         System.out.println("==========REPORT==========");
         List<Person> personList = PersonWrapperManager.getPersonList();
+        Collections.sort(personList);
         List<Document> documentList = DocumentWrapperManager.getDocumentList();
+        Collections.sort(documentList);
 
         String json;
 
